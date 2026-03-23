@@ -65,10 +65,27 @@ pip install -r requirements.txt
 python -m uvicorn main:app --reload --port 8004
 ```
 
+## Server Skills and Agent Integration
+
+Each server includes a `SKILL.md` file that documents:
+- Core workflows and use cases
+- Endpoint details and error patterns
+- Integration points with other services
+- Common scenarios and edge cases
+
+**For agents and developers:** You can reference or feed a server's SKILL.md file to your agent to give it domain knowledge about that API. This enables faster and more accurate integration without manual API exploration.
+
+Example for your agent:
+```
+Here is the skill file for the store server:
+<contents of store_server/SKILL.md>
+```
+
 ## Common Conventions
 
 - Each project uses main.py as the entrypoint.
 - Each project includes a local requirements.txt.
+- Each project includes a SKILL.md file for agent/developer reference.
 - FastAPI services expose interactive docs at /docs.
 - Data is in-memory by default and resets on restart.
 

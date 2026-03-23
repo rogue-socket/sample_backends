@@ -11,6 +11,7 @@ Collection of runnable sample servers for local development, integration testing
 | file_upload_server | File upload and download API | FastAPI | 8001 |
 | search_server | Document indexing and search API | FastAPI | 8002 |
 | messaging_server | Room messaging with REST and WebSocket | FastAPI | 8003 |
+| otp_auth_server | OTP auth and session token flow | FastAPI | 8004 |
 
 ## Quick Start
 
@@ -54,6 +55,14 @@ python -m uvicorn main:app --reload --port 8002
 cd messaging_server
 pip install -r requirements.txt
 python -m uvicorn main:app --reload --port 8003
+```
+
+### OTP Auth Server (8004)
+
+```bash
+cd otp_auth_server
+pip install -r requirements.txt
+python -m uvicorn main:app --reload --port 8004
 ```
 
 ## Common Conventions
